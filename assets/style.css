@@ -34,7 +34,12 @@ body {
   font-family: 'Sarala', sans-serif;
   color: #FFF2E7;
   font-weight: 400;
-  font-size: 18px
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cabecalho-menu-item:hover {
+    opacity: 0.8;
 }
 
 .conteudo {
