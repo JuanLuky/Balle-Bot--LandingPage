@@ -7,4 +7,4 @@ Projeto desenvolvido pela Rafaella Ballerini.
 - GIT
 
 ## Deploy:
-- 
+- https://juanluky.github.io/Balle-Bot--LandingPage/
