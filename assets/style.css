@@ -144,7 +144,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 50px;
+    padding: 5px 50px;
   }
   .cabecalho-imagem {
     width: 50px;
@@ -176,7 +176,7 @@ body {
   .one,
   .two,
   .three {
-    background: linear-gradient(rgb(238, 229, 229), #ffffff);
+    background-color: #ffffff;
     height:4px;
     width: 100%;
     margin: 6px auto;
@@ -189,7 +189,7 @@ body {
     margin-right: 20px;
     position: absolute;
     right: 10px;
-    top: 40px;
+    top: 22px;
   }
   /* Tela Cheia */
   .menu-section.on {
