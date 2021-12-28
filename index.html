@@ -12,13 +12,28 @@
 
 <body>
   <header class="cabecalho">
+    <!-- logo -->
     <img class="cabecalho-imagem" src="assets/logo.svg" alt="Logo da comunidade Ballerini">
-    <nav class="cabecalho-menu">
-      <a class="cabecalho-menu-item" href="https://discord.gg/wagxzStdcR">Comunidade Ballerini</a>
-      <a class="cabecalho-menu-item">Tutorial</a>
-      <a class="cabecalho-menu-item">Open Source</a>
-      <a class="cabecalho-menu-item">Comandos</a>
-    </nav>
+
+    <div class="header-global">
+      <div class="menu-section">
+        <div class="menu-toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+
+        <nav class="cabecalho-menu">
+          <ul>
+            <li><a  class="cabecalho-menu-item" href="https://discord.gg/wagxzStdcR">Comunidade Ballerini</a></li>
+            <li><a  class="cabecalho-menu-item" href="#">Tutorial</a></li>
+            <li><a  class="cabecalho-menu-item" href="#">Open Source</a></li>
+            <li><a  class="cabecalho-menu-item" href="#footer">Comandos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    
   </header>
 
   <main class="conteudo">
@@ -39,9 +54,12 @@
     </section>
   </main>
 
-  <footer class="rodape">
+  <footer class="rodape" id="footer">
     <img class="rodape-imagem" src="assets/ballerini.svg">
   </footer>
+
+
+  <script src="app.js"></script>
 </body>
 
 </html>
