@@ -19,3 +19,15 @@ menuLista.forEach((i) => {
         menuSection.classList.remove("on");
     })
 })
+
+// Efeito de escrever ================================
+function typeWrite(element) {
+    const textoArray = element.innerHTML.split('');
+    element.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+        setTimeout(() => {
+            element.innerHTML += letra;
+        }, 250 * i)
+    });
+}
+typeWrite(document.querySelector('.name'));

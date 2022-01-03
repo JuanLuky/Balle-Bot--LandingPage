@@ -10,19 +10,27 @@
 
 body {
   font-size: 62.5%;
-  background: linear-gradient(68.15deg, #2f2325 16.62%, #8e5d52 85.61%);
+  background: linear-gradient(#2c211bf6, #473227fb), url(cofeefundo.jpg);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .cabecalho {
+  max-width: 1140px;
+  width: 90%;
+  height: 90px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 24px;
+  justify-content: space-between;
 }
 
-.cabecalho-imagem {
-  height: 72px;
+.cabecalho-logo {
+  font-family: "Righteous", cursive;
+  font-size: 2.2rem;
+  color: #d4bbae;
 }
 
 .cabecalho-menu ul {
@@ -31,53 +39,78 @@ body {
 }
 
 .cabecalho-menu-item {
+  position: relative;
   font-family: "Sarala", sans-serif;
-  color: #fff2e7;
+  color: #d4bbae;
   font-weight: 400;
   font-size: 1rem;
   cursor: pointer;
+  padding-bottom: 24px;
+  transition: 0.5s;
 }
-
-.cabecalho-menu-item:hover {
-  opacity: 0.8;
+.cabecalho-menu-item::after {
+  content: "";
+  height: 1.5px;
+  width: 0;
+  background: #b87e71;
+  left: 0;
+  bottom: -10px;
+  position: absolute;
+  transition: 0.5s;
+}
+.cabecalho-menu-item:hover::after {
+  width: 100%;
 }
 
 .conteudo {
   margin-bottom: 50px;
-  border-top: 0.4px solid #fff2e7;
+  border-top: 0.4px solid #91716062;
 }
 
 .conteudo-principal {
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 60vh;
+  max-width: 1140px;
+  width: 90%;
 }
 
 .conteudo-principal-escrito {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
   gap: 20px;
 }
 
 .conteudo-principal-escrito-titulo {
+  position: relative;
   font-family: "Righteous", cursive;
   font-weight: 400;
   font-size: 4.5rem;
-  color: #fff2e7;
+  color: #d4bbae;
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: 1;
+}
+.conteudo-principal-escrito-titulo:hover {
+  letter-spacing: 5px;
 }
 
 .conteudo-principal-escrito-subtitulo {
   font-family: "Sarala", sans-serif;
   font-weight: 400;
+  max-width: 560px;
+  width: 80%;
   font-size: 1rem;
-  color: #ecd6c4;
+  color: #d4bbae;
 }
 
 .conteudo-principal-escrito-botao {
   width: 200px;
-  background-color: #ecd6c4;
+  background-color: #d4bbae;
   border: none;
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -85,7 +118,7 @@ body {
   font-weight: 400;
   padding: 10px 30px;
   font-size: 1.2rem;
-  color: #2f2325;
+  color: #3d2c23;
   cursor: pointer;
   transition: width 0.5s;
 }
@@ -96,9 +129,30 @@ body {
 }
 
 .conteudo-principal-imagem {
-  height: 430px;
-}
+  height: 400px;
+  position: relative;
+  animation: tremer 1s linear forwards;
+  animation-iteration-count: 4;
 
+}
+@keyframes tremer {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 7px;
+
+  }
+  50% {
+    margin-left: 0;
+  }
+  75% {
+    margin-left: -7px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
 .conteudo-secundario {
   display: flex;
   flex-direction: column;
@@ -108,12 +162,12 @@ body {
 }
 
 .conteudo-secundario-titulo {
-  border-bottom: 0.4px solid #fff2e7;
+  border-bottom: 0.4px solid #d4bbae;
   padding-bottom: 20px;
   font-family: "Righteous", cursive;
   font-weight: 400;
   font-size: 1.6rem;
-  color: #fff2ef;
+  color: #d4bbae;
   margin-bottom: 16px;
 }
 
@@ -121,44 +175,46 @@ body {
   font-family: "Sarala", sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
-  color: #ecd6c4;
+  color: #d4bbae;
 }
 
 .rodape {
+  border-top: 0.3px solid #d4bbae6c;
   padding: 32px;
-  border-top: 0.4px solid #fff2e7;
 }
 
 .rodape-imagem {
   width: 200px;
-  height: 48px;
   display: block;
   margin: 0 auto;
 }
 
 @media (max-width: 1100px) {
   html {
-    font-size:50%;
+    font-size: 50%;
   }
   .cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 50px;
-  }
-  .cabecalho-imagem {
-    width: 50px;
+    padding: 5px 20px;
+    height: 60px;
   }
   .conteudo-principal {
     flex-direction: column;
     height: auto;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
   .conteudo-principal-imagem {
     order: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 200px;
-    margin: 20px;
   }
   .conteudo-secundario {
     max-width: 980px;
@@ -169,6 +225,15 @@ body {
   .rodape-imagem {
     width: 150px;
   }
+  .conteudo-principal-escrito-botao {
+    margin: auto;
+  }
+
+  .conteudo-principal-escrito-subtitulo {
+    max-width: 500px;
+    width: 80%;
+    margin: auto;
+  }
   /* Menu Mobile =========================*/
   nav {
     display: none;
@@ -177,19 +242,19 @@ body {
   .two,
   .three {
     background-color: #ffffff;
-    height:4px;
+    height: 3px;
     width: 100%;
     margin: 6px auto;
 
     transition-duration: 0.3s;
   }
   .menu-toggle {
-    width:40px;
+    width: 40px;
     height: 30px;
     margin-right: 20px;
     position: absolute;
     right: 10px;
-    top: 22px;
+    top: 12px;
   }
   /* Tela Cheia */
   .menu-section.on {
@@ -205,26 +270,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9;
   }
-  .menu-section.on nav{
+  .menu-section.on nav {
     display: block;
   }
   .menu-section.on .menu-toggle .one {
-    transform:rotate(45deg) translate(7px,7px);
+    transform: rotate(45deg) translate(6px, 8px);
   }
   .menu-section.on .menu-toggle .two {
     opacity: 0;
   }
   .menu-section.on .menu-toggle .three {
-    transform:rotate(-45deg) translate(8px,-7px);
+    transform: rotate(-45deg) translate(5px, -6px);
   }
 
-  .menu-section.on nav ul{
+  .menu-section.on nav ul {
     text-align: center;
     display: flex;
     flex-direction: column;
   }
-  .menu-section.on nav ul li{
+  .menu-section.on nav ul li {
     display: inline-block;
     margin-bottom: 30px;
   }
@@ -238,6 +304,5 @@ body {
   }
   .menu-section.on nav ul li a:hover {
     border-bottom: 2px solid #fff;
-
   }
 }
