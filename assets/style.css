@@ -11,9 +11,9 @@
 body {
   font-size: 62.5%;
   background: linear-gradient(#2c211bf6, #473227fb), url(cofeefundo.jpg);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cabecalho {
