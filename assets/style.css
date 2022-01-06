@@ -257,6 +257,7 @@ body {
   .conteudo-principal-imagem {
     order: -1;
     display: flex;
+    margin-top:30px;
     justify-content: center;
     align-items: center;
     width: 200px;
