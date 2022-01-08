@@ -8,6 +8,7 @@
   list-style: none;
 }
 html {
+  /* cada rem será considerado 10px */
   font-size: 62.5%;
 }
 body {
@@ -15,6 +16,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  font-size: 1.6rem;
 }
 
 .cabecalho {
@@ -278,7 +280,7 @@ body {
 
   .conteudo-principal-escrito-subtitulo {
     max-width: 500px;
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
   /* Menu Mobile =========================*/
@@ -353,8 +355,4 @@ body {
     border-bottom: 2px solid #fff;
   }
 }
-@media (max-width: 420px) {
-  html {
-    font-size: 40%;
-  }
-}
+
